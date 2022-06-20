@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="22dp"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="false"
+    android:outlineAmbientShadowColor="@color/black"
+    android:elevation="8dp"
+    app:contentPadding="12dp"
+    app:cardElevation="12dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="42dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/txt_id_rec"
+            android:layout_width="220dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:hint="ID CONTACTO"
+            app:layout_constraintStart_toEndOf="@+id/img_foto_rec"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_foto_rec"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"></ImageView>
+
+
+        <EditText
+            android:id="@+id/edit_nome_rec"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:hint="Nome Parquemento"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="33dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_foto_rec"
+            app:layout_constraintTop_toBottomOf="@+id/txt_id_rec">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/edit_endreco_rec"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="33dp"
+            android:hint="Endreco"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.232"
+            app:layout_constraintStart_toEndOf="@+id/bt_find_rec"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nome_rec"></EditText>
+
+        <Button
+            android:id="@+id/bt_find_rec"
+            android:layout_width="99dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            android:text="Find"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_foto_rec"></Button>
+
+        <Button
+            android:id="@+id/bt_update_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_find_rec"></Button>
+
+        <Button
+            android:id="@+id/bt_delete_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_update_rec"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
